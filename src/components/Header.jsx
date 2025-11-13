@@ -64,12 +64,12 @@ export default function Header() {
             ))}
 
             {/* Login Link */}
-            <Link
+            {/* <Link
               to="/login"
               className="text-lg font-medium hover:text-[#fca532] transition"
             >
               Login
-            </Link>
+            </Link> */}
 
             {/* Desktop Enroll Button */}
             <Button onClick={() => setIsModalOpen(true)}>
@@ -100,13 +100,13 @@ export default function Header() {
               ))}
 
               {/* Mobile Login */}
-              <Link
+              {/* <Link
                 to="/login"
                 className="text-lg hover:text-[#fca532] transition"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Login
-              </Link>
+              </Link> */}
 
               {/* ✅ Mobile Enroll Button (Fixed) */}
               <Button

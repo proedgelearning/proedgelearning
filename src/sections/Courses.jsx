@@ -6,7 +6,7 @@ export default function Courses() {
   const courses = [
     {
       title: "Basic Computer Skills",
-      img: "https://images.unsplash.com/photo-1581091012184-7c4c9567ce1d?auto=format&fit=crop&w=800&q=80",
+      img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80",
       link: "/course/basic-computer"
     },
     {
@@ -26,7 +26,7 @@ export default function Courses() {
     },
     {
       title: "SQL Basic",
-      img: "https://images.unsplash.com/photo-1555949963-aa79dcee981d?auto=format&fit=crop&w=800&q=80",
+      img: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=1200&q=80",
       link: "/course/sql-basic"
     },
     {
