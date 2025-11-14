@@ -44,6 +44,77 @@ export const GlobeIcon = (props) => (
   </svg>
 );
 
+// src/components/icons/Icons.jsx
+export function LightBulbIcon(props) {
+  return (
+    <svg
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9.5 18h5M10 22h4M9 14c-1.657 0-3-1.343-3-3a6 6 0 1 1 12 0c0 1.657-1.343 3-3 3H9Z"
+      />
+    </svg>
+  );
+}
+
+export function SparklesIcon(props) {
+  return (
+    <svg
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+    >
+      <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
+      <path d="M4 15l.75 2.25L7 18l-2.25.75L4 21l-.75-2.25L1 18l2.25-.75L4 15z" />
+      <path d="M20 10l.75 2.25L23 13l-2.25.75L20 16l-.75-2.25L17 13l2.25-.75L20 10z" />
+    </svg>
+  );
+}
+
+export function BriefcaseIcon(props) {
+  return (
+    <svg
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+    >
+      <path d="M3 7h18v13H3z" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M3 12h18" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function ClockIcon(props) {
+  return (
+    <svg
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2" />
+    </svg>
+  );
+}
+
+
 export const BookOpenIcon = (props) => (
   <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
@@ -51,12 +122,6 @@ export const BookOpenIcon = (props) => (
   </svg>
 );
 
-export const ClockIcon = (props) => (
-  <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <circle cx="12" cy="12" r="10" />
-    <polyline points="12 6 12 12 16 14" />
-  </svg>
-);
 
 export const CheckCircleIcon = (props) => (
   <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

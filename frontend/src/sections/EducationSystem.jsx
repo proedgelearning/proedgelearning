@@ -24,13 +24,13 @@ export default function EducationSystem() {
           <span className="text-[#fca532] font-semibold text-lg uppercase">Our System</span>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-[#0a214d] my-4">Our Education System Inspires</h2>
 
-          {["Expert-led Courses", "Real-world Projects", "Career Guidance"].map((text) => (
+          {["Expert-led Guidance", "Real-world Projects","Ai & Future-Ready Skills","Budget-Friendly Courses","Career Focused Programs","Smart Classes","Job Readiness","Skill Contribution"].map((text) => (
             <div key={text} className="flex items-center mb-4">
               <CheckCircleIcon className="w-6 h-6 text-[#fca532] mr-3" /> <span>{text}</span>
             </div>
           ))}
 
-          <Button>Learn More</Button>
+          {/* <Button>Learn More</Button> */}
         </div>
       </div>
     </div>
