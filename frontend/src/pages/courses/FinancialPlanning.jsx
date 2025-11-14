@@ -4,8 +4,8 @@ import Footer from "../../components/Footer";
 import CoursePageLayout from "../../components/CoursePageLayout";
 import courses from "../../pages/courses/data/courses";
 
-export default function ExcelVBA() {
-  const course = courses.find(c => c.slug === "ExcelVBA");
+export default function FinancialPlanning() {
+  const course = courses.find(c => c.slug === "FinancialPlanning");
 
   return (
     <div>

@@ -1,19 +1,24 @@
+import React from "react";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import CoursePageLayout from "../../components/CoursePageLayout";
+import courses from "../../pages/courses/data/courses";
 
 export default function PowerAutomate() {
+  const course = courses.find(c => c.slug === "PowerAutomate");
+
   return (
-    <CoursePageLayout
-      title="Power Automate"
-      description="Learn to automate workflows, approvals, and integrations across business applications using Microsoft Power Platform."
-      imageUrl="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80"
-      points={[
-        "Understanding Flows & Triggers",
-        "Working with APIs & Connectors",
-        "Creating Multi-Step Workflows",
-        "Approval Automations",
-        "Integration with Teams, Excel & SharePoint",
-        "RPA Desktop Automation Techniques"
-      ]}
-    />
+    <div>
+      <Header />
+      <CoursePageLayout
+        title={course.title}
+        description={course.description}
+        imageUrl={course.img}
+        mrp={course.mrp}
+        price={course.price}
+        points={course.points}
+      />
+      <Footer />
+    </div>
   );
 }

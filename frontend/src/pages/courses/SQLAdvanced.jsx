@@ -1,19 +1,24 @@
+import React from "react";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import CoursePageLayout from "../../components/CoursePageLayout";
+import courses from "../../pages/courses/data/courses";
 
 export default function SQLAdvanced() {
+  const course = courses.find(c => c.slug === "SQLAdvanced");
+
   return (
-    <CoursePageLayout
-      title="SQL Advanced"
-      description="Designed for professionals looking to optimize database operations and master advanced querying techniques used in enterprise systems."
-      imageUrl="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1200&q=80"
-      points={[
-        "Advanced Joins & Window Functions",
-        "Stored Procedures & Functions",
-        "CTEs & Query Optimization",
-        "Transactions & Error Control",
-        "Indexing & Performance Tuning",
-        "JSON & XML Data Handling"
-      ]}
-    />
+    <div>
+      <Header />
+      <CoursePageLayout
+        title={course.title}
+        description={course.description}
+        imageUrl={course.img}
+        mrp={course.mrp}
+        price={course.price}
+        points={course.points}
+      />
+      <Footer />
+    </div>
   );
 }

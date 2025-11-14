@@ -12,7 +12,7 @@ import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a214d] text-gray-300 pt-20 pb-8">
+    <footer className="bg-[#0a214d] text-gray-300 pt-5 pb-8">
       <div className="container mx-auto px-6 grid gap-12 md:grid-cols-4">
         {/* Brand + Description */}
         <div>

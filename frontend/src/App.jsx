@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+
 import About from "./pages/About";
 import CoursesPage from "./pages/Courses";
 import ApplicationForm from "./pages/ApplicationForm";
@@ -24,6 +26,10 @@ import SQLBasic from "./pages/courses/SQLBasic";
 import SQLAdvanced from "./pages/courses/SQLAdvanced";
 import PowerBI from "./pages/courses/PowerBI";
 import PowerAutomate from "./pages/courses/PowerAutomate";
+import PowerPlatform from "./pages/courses/PowerPlatform";
+import PromptEngineering from "./pages/courses/PromptEngineering";
+import FinancialPlanning from "./pages/courses/FinancialPlanning";
+import HumanResource from "./pages/courses/HumanResource";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -42,6 +48,9 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      {/* Scroll to top on every route change */}
+      <ScrollToTop behavior="smooth" />
+
       <Routes>
         {/* Public Website */}
         <Route
@@ -93,7 +102,7 @@ export default function App() {
           }
         />
 
-         <Route
+        <Route
           path="/contactus"
           element={
             <>
@@ -113,6 +122,11 @@ export default function App() {
         <Route path="/course/sql-advanced" element={<SQLAdvanced />} />
         <Route path="/course/powerbi" element={<PowerBI />} />
         <Route path="/course/power-automate" element={<PowerAutomate />} />
+        <Route path="/course/power-platform" element={<PowerPlatform />} />
+        <Route path="/course/prompt-engineering" element={<PromptEngineering />} />
+        <Route path="/course/financial-planning" element={<FinancialPlanning />} />
+        <Route path="/course/human-resource" element={<HumanResource />} />
+
         {/* Login */}
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
 
