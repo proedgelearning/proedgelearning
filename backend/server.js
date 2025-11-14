@@ -1,6 +1,7 @@
 // server.js (ESM version)
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';            // <-- added
 import pkg from 'pg';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
@@ -10,6 +11,37 @@ const { Client } = pkg; // Extract Client from pg
 
 const app = express();
 app.use(bodyParser.json());
+
+// ---- CORS configuration ----
+// Allow specifying allowed origins via env, fallback to common values.
+// Set FRONTEND_ORIGIN env to add your deployed frontend (e.g. https://your-frontend.com)
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || 'http://localhost:5173';
+const EXTRA_ORIGINS = process.env.EXTRA_ORIGINS ? process.env.EXTRA_ORIGINS.split(',') : [];
+const allowedOrigins = [FRONTEND_ORIGIN, ...EXTRA_ORIGINS].filter(Boolean);
+
+// Use a function to allow multiple origins and to allow credentials
+app.use(cors({
+  origin: function(origin, callback) {
+    // allow requests with no origin (like curl or mobile apps)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('CORS policy: This origin is not allowed'), false);
+    }
+  },
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+}));
+
+// Ensure preflight requests are handled
+app.options('*', cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
+/* ---------- rest of file ---------- */
 
 // Environment variables
 const DATABASE_URL = process.env.DATABASE_URL;
@@ -149,7 +181,7 @@ app.get('/api/students', requireAdmin, async (req, res) => {
 
 // Create
 // app.post('/api/students', requireAdmin, async (req, res) => {
-  app.post('/api/students', async (req, res) => {
+app.post('/api/students', async (req, res) => {
   const data = req.body || {};
 
   const allowed = [
