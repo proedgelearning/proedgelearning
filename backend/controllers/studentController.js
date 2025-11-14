@@ -1,8 +1,27 @@
 import { pool } from "../config/db.js";
 
+/**
+ * Save student record to the database.
+ * Includes:
+ * - Required field validation
+ * - Safe default NULL values
+ * - Detailed DB error response (temporary for debugging)
+ */
 export const saveStudent = async (req, res) => {
   try {
-    const data = req.body;
+    const data = req.body || {};
+
+    // Required fields
+    const required = ["fullName", "dob", "gender", "contact", "email"];
+
+    const missing = required.filter((f) => !data[f]);
+    if (missing.length > 0) {
+      return res.status(400).json({
+        success: false,
+        error: "Missing required fields",
+        missing,
+      });
+    }
 
     const query = `
       INSERT INTO students (
@@ -20,24 +39,31 @@ export const saveStudent = async (req, res) => {
       data.gender,
       data.contact,
       data.email,
-      data.address,
-      data.educationLevel,
-      data.school,
-      data.board,
-      data.subjects,
-      data.preferredCourses,
-      data.otherCourse,
-      data.batchTiming,
-      data.emergencyName,
-      data.emergencyRelation,
-      data.emergencyPhone
+      data.address || null,
+      data.educationLevel || null,
+      data.school || null,
+      data.board || null,
+      data.subjects || null,
+      data.preferredCourses || null,
+      data.otherCourse || null,
+      data.batchTiming || null,
+      data.emergencyName || null,
+      data.emergencyRelation || null,
+      data.emergencyPhone || null,
     ];
 
     await pool.query(query, values);
 
-    res.json({ success: true, message: "Student registered successfully" });
+    return res.json({
+      success: true,
+      message: "Student registered successfully",
+    });
   } catch (err) {
     console.error("❌ DB ERROR:", err);
-    res.status(500).json({ error: "Database error" });
+
+    return res.status(500).json({
+      error: "Database error",
+      details: err.message, // <— ADDED for debugging
+    });
   }
 };
