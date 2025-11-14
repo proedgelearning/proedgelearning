@@ -16,6 +16,17 @@ export const XIcon = (props) => (
   </svg>
 );
 
+export const YoutubeIcon = (props) => (
+  <svg
+    {...props}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M21.8 8.001a2.75 2.75 0 0 0-1.93-1.947C17.9 5.5 12 5.5 12 5.5s-5.9 0-7.87.554A2.75 2.75 0 0 0 2.2 8.001 28.6 28.6 0 0 0 1.5 12a28.6 28.6 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.93 1.947C6.1 18.5 12 18.5 12 18.5s5.9 0 7.87-.554a2.75 2.75 0 0 0 1.93-1.947c.46-1.31.7-2.706.7-3.999a28.6 28.6 0 0 0-.7-3.999zM10 15.27V8.73L15.5 12 10 15.27z"/>
+  </svg>
+);
+
+
 export const UsersIcon = (props) => (
   <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -68,10 +79,18 @@ export const FacebookIcon = (props) => (
 );
 
 export const TwitterIcon = (props) => (
-  <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 2.8 3.2 3.7 5.3-1.1.7-2.3 1.2-3.6 1.4 1 1.6 2.3 2.8 3.8 4.3-1.4.9-3 1.5-4.6 1.8.9 1.1 2.2 2.1 3.7 2.9-1.6.8-3.3 1.3-5.1 1.4-.9.1-1.8.1-2.7 0-1.8-.1-3.6-.6-5.2-1.4 1.5-.8 2.8-1.8 3.7-2.9-1.3-.3-2.5-1-3.4-2.1-.5.1-.9.1-1.4 0-1.6-.3-2.9-1.4-3.8-2.9.5.1 1 .1 1.4 0C.7 5.1 0 6.6 0 8.2c.5.1 1 .1 1.4 0 .1 1.4.4 2.8 1 4.1.6 1.3 1.3 2.5 2.2 3.6 1.2.7 2.5 1.2 3.8 1.5 1.3.3 2.6.4 3.9.4z" />
+  <svg
+    {...props}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <path d="M18 6 6 18" />
+    <path d="m6 6 12 12" />
   </svg>
 );
+
 
 export const LinkedinIcon = (props) => (
   <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -98,5 +117,19 @@ export const WhatsAppIcon = (props) => (
 export const XIconTwitter = (props) => (
   <svg {...props} fill="currentColor" viewBox="0 0 24 24">
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.483 11.24H16.36l-5.217-6.817-5.96 6.817H1.875l7.73-8.84L1.5 2.25h7.043l4.713 6.234 4.988-6.234z"/>
+  </svg>
+);
+
+
+export const GmailIcon = (props) => (
+  <svg
+    {...props}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <path d="M3 5h18v14H3z" />
+    <path d="M3 7l9 6 9-6" />
   </svg>
 );

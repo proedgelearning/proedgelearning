@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import About from "./pages/About";
 import CoursesPage from "./pages/Courses";
 import ApplicationForm from "./pages/ApplicationForm";
+import Contactus from "./pages/Contactus";
 import Hero from "./sections/Hero";
 import Features from "./sections/Features";
 import AboutUs from "./sections/AboutUs";
@@ -87,6 +88,17 @@ export default function App() {
             <>
               <Header />
               <ApplicationForm />
+              <Footer />
+            </>
+          }
+        />
+
+         <Route
+          path="/contactus"
+          element={
+            <>
+              <Header />
+              <Contactus />
               <Footer />
             </>
           }

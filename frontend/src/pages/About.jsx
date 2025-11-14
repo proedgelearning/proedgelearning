@@ -28,8 +28,6 @@ export default function About() {
             <p className="text-gray-700">✔ Live & Practical Sessions</p>
             <p className="text-gray-700">✔ Job Support & Career Guidance</p>
           </div>
-
-          <Button>Enroll Now</Button>
         </div>
       </div>
     </div>

@@ -3,10 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   FacebookIcon,
+  InstagramIcon,
   LinkedinIcon,
   WhatsAppIcon,
   XIconTwitter,
 } from "./icons/Icons";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -14,30 +16,87 @@ export default function Footer() {
       <div className="container mx-auto px-6 grid gap-12 md:grid-cols-4">
         {/* Brand + Description */}
         <div>
-          <h3 className="text-3xl font-bold text-[#fca532] mb-4">PROEDGE</h3>
+          <h3 className="text-3xl font-bold mb-4">
+            <span className="text-[#fca532]">PRO</span>
+            <span className="text-white">EDGE</span>
+          </h3>
           <p className="mb-6 leading-relaxed">
             Empowering learners with professional, practical skill development.
           </p>
 
           {/* Social Icons */}
-          <div className="flex space-x-4 mb-6">
+          <div className="flex items-center space-x-4 mb-6">
+            {/* WhatsApp (click-to-chat) */}
             <a
               href="https://wa.me/918105751886"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp ProEdge Learning"
               className="hover:text-[#fca532] transition-colors"
             >
               <WhatsAppIcon className="w-6 h-6" />
             </a>
-            <a href="#" className="hover:text-[#fca532] transition-colors">
-              <FacebookIcon className="w-6 h-6" />
+
+            {/* YouTube */}
+            <a
+              href="https://www.youtube.com/@ProEdgeLearning"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube ProEdge Learning"
+              className="hover:text-[#fca532] transition-colors"
+            >
+              {/* If you have a YoutubeIcon component, use that instead */}
+              <svg
+                className="w-6 h-6"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden
+              >
+                <path d="M23.5 6.2s-.2-1.7-.8-2.4c-.8-.9-1.6-.9-2-1-2.8-.2-7-.2-7-.2s-4.2 0-7 .2c-.5 0-1.3.1-2 .9-.6.7-.8 2.4-.8 2.4S3.5 8 3.5 9.8v1.4c0 1.8.4 3.6.4 3.6s.2 1.7.8 2.4c.7.8 1.7.8 2.1.9 1.6.1 6.8.2 6.8.2s4.2 0 7-.2c.5 0 1.3-.1 2-.9.6-.7.8-2.4.8-2.4s.4-1.8.4-3.6V9.8c0-1.8-.4-3.6-.4-3.6zM9.9 14.6V8.4l5.2 3.1-5.2 3.1z" />
+              </svg>
             </a>
-            <a href="#" className="hover:text-[#fca532] transition-colors">
+
+            {/* X (formerly Twitter) */}
+            <a
+              href="https://x.com/ProEdgeLearning"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X ProEdge Learning"
+              className="hover:text-[#fca532] transition-colors"
+            >
               <XIconTwitter className="w-6 h-6" />
             </a>
-            <a href="#" className="hover:text-[#fca532] transition-colors">
-              <LinkedinIcon className="w-6 h-6" />
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/theproedgelearning/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram ProEdge Learning"
+              className="hover:text-[#fca532] transition-colors"
+            >
+              <InstagramIcon className="w-6 h-6" />
             </a>
+
+            {/* Email */}
+            <a
+              href="mailto:proedgelearningofficial@gmail.com"
+              aria-label="Email ProEdge Learning"
+              className="hover:text-[#fca532] transition-colors"
+            >
+              <Mail className="w-6 h-6" />
+            </a>
+
+            {/* Optional: LinkedIn (if you have a page, replace href) */}
+            {/* <a
+              href="https://www.linkedin.com/company/proedgelearning"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn ProEdge Learning"
+              className="hover:text-[#fca532] transition-colors"
+            >
+              <LinkedinIcon className="w-6 h-6" />
+            </a> */}
           </div>
 
           {/* Map Embed */}
@@ -66,6 +125,29 @@ export default function Footer() {
 
         {/* Courses Column 1 */}
         <div>
+          <h4 className="text-xl text-white mb-6">Quick Links</h4>
+          <Link
+            to="/"
+            className="block mb-2 hover:text-[#fca532] transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="block mb-2 hover:text-[#fca532] transition-colors"
+          >
+            About Us
+          </Link>
+          <Link
+            to="/application"
+            className="block mb-2 hover:text-[#fca532] transition-colors"
+          >
+            Application Form
+          </Link>
+        </div>
+
+        {/* Courses Column 2 + Quick Links */}
+        <div>
           <h4 className="text-xl text-white mb-6">Courses</h4>
           <Link
             to="/course/basic-computer"
@@ -91,11 +173,6 @@ export default function Footer() {
           >
             Excel + VBA Scripting
           </Link>
-        </div>
-
-        {/* Courses Column 2 + Quick Links */}
-        <div>
-          <h4 className="text-xl text-white mb-6">Courses</h4>
           <Link
             to="/course/sql-basic"
             className="block mb-3 hover:text-[#fca532] transition-colors"
@@ -119,26 +196,6 @@ export default function Footer() {
             className="block mb-3 hover:text-[#fca532] transition-colors"
           >
             Power Automate
-          </Link>
-
-          <h4 className="text-xl text-white mt-8 mb-4">Quick Links</h4>
-          <Link
-            to="/"
-            className="block mb-2 hover:text-[#fca532] transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className="block mb-2 hover:text-[#fca532] transition-colors"
-          >
-            About Us
-          </Link>
-          <Link
-            to="/application"
-            className="block mb-2 hover:text-[#fca532] transition-colors"
-          >
-            Application Form
           </Link>
         </div>
       </div>
