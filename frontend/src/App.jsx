@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
@@ -47,6 +47,7 @@ export default function App() {
   };
 
   return (
+    
     <BrowserRouter>
       {/* Scroll to top on every route change */}
       <ScrollToTop behavior="smooth" />
