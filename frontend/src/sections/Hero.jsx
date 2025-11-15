@@ -29,7 +29,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="bg-[#0a214d] text-white pt-20 pb-32">
+    <div className="bg-[#0a214d] pt-20 pb-32">
       <div className="container mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
 
         {/* Text Content */}
@@ -38,7 +38,7 @@ export default function Hero() {
             Welcome To The ProEdge
           </span>
 
-          <h1 className="text-4xl lg:text-6xl font-extrabold my-4 leading-tight">
+          <h1 className="text-4xl lg:text-6xl text-white font-extrabold my-4 leading-tight">
             Success Is Just A Step Away
           </h1>
 
