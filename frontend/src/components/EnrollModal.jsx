@@ -408,6 +408,7 @@ export default function EnrollModal({ isOpen, onClose }) {
                       <input
                         name="dob"
                         type="date"
+                        // placeholder="Select DOB"
                         value={form.dob}
                         onChange={handleChange}
                         className={`mt-2 w-full px-4 py-3 rounded-lg border ${
